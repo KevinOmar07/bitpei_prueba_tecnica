@@ -28,12 +28,12 @@ export const getUsuarios = async(req, res=response) => {
 
 export const deleteUsuario = async(req = request, res = response) => {
     const id = req.body.id;
-    const eliminadado = await usuario.destroy({where: {id_usuario: id}});
+    const eliminado = await usuario.destroy({where: {id_usuario: id}});
 
     res.json({
-        msg: 'Usuario eliminado',
+        msg: eliminado > 0 ? 'Usuario eliminado' : 'No se encontro el usuairo o no existe',
         id,
-        eliminadado
+        eliminado
     });
 }
 
@@ -47,7 +47,8 @@ export const updateUsuario = async (req = request, res = response) => {
     const user = await usuario.update({nombre, apellidos, usuario:req.body.usuario, contrasena:pass}, {where: {id_usuario: id}});
 
     res.json({
-        msg: 'Usuario actualziado',
+        msg: user[0] > 0 ? 'Usuario actualziado' : 'Usuario no actualizado',
+        nombre,
         user
     });
 }

@@ -38,7 +38,7 @@ const router = Router();
 *                default: kevin123
 *     responses:
 *      200:
-*        description: Create
+*        description: Este endpoint es para poder crear nuevos usuarios. para poder hacerlo se necesitan 4 datos, nombre, apellidos, usuario y contraseña.
 *      400:
 *        description: Bad Request
 *      404:
@@ -64,7 +64,7 @@ router.post('/create', [
  *      required: false  
  *     responses:
  *      200:
- *        description: getAll
+ *        description: Este endpoint es para poder obtener todos los usurios registrados en la base de datos. Para consumir este servicio no es neceario enviar ningun parametro.
  *      400:
  *        description: Bad Request
  *      404:
@@ -93,7 +93,7 @@ router.get('/get', getUsuarios);
   *                default: 1
   *     responses:
   *      200:
-  *        description: Delete
+  *        description: Este endpoint es para poder obtener los datos de un usuario en especifico, se necesita enviar el id para poder encontrarlo.
   *      400:
   *        description: Bad Request
   *      404:
@@ -126,7 +126,7 @@ router.post('/getOne', [
   *                default: 1
   *     responses:
   *      200:
-  *        description: Delete
+  *        description: Este endpoint es para eliminar un usuario, se necesita enviar el id para saber que usuario eliminar
   *      400:
   *        description: Bad Request
   *      404:
@@ -174,7 +174,7 @@ router.delete('/delete', [
 *                default: kevin1234
 *     responses:
 *      200:
-*        description: Update
+*        description: Este endpoint es para actualizar los datos de algun usuario. Se necesita enviar el id asi como todos los datos, nombre, apellido, usuario, contrasena
 *      400:
 *        description: Bad Request
 *      404:

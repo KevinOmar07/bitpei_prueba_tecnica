@@ -14,3 +14,37 @@ npm run dev
 
 El proyector se ejecutara en el puerto 3000.
 
+Los endpoints son los siguientes: 
+
+/usuario/create
+    data:{
+        "nombre":"Pedro",
+        "apellidos": "Lopez",
+        "usuario": "EliTester",
+        "contrasena": "kevin12."
+    }
+
+/usuario/get
+
+/usuario/getOne
+    data:{
+        "id" : 1
+    }
+
+/usuario/update
+    data: {
+        "id": 1,
+        "nombre":"Kevin",
+        "apellidos": "Nuricumbo",
+        "usuario": "EliTester",
+        "contrasena": "kevin12."
+    }
+
+/usuario/delete
+    data:{
+        "id": "5"
+    }
+
+De igual manera, para entender mejor las rutas, se hizo uso de Swagger, la ruta para poder acceder es la siguente:
+
+/docs/
